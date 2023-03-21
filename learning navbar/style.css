@@ -1,0 +1,121 @@
+/* Boiler plate CSS to make it easier*/
+
+* {
+  /* To style widths much easier */
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  /* to put everything up next to the border of the screen */
+}
+
+.navbar {
+  /* flexbox to display, to line them side by side */
+  display: flex;
+  /* push them as far from each other as possible */
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: white;
+}
+
+.menu {
+  font-size: 1.5rem;
+  margin: 0.5rem;
+}
+
+.navbar-links ul {
+  /* remove all the normal styling */
+  margin: 0;
+  padding: 0;
+  /* to easily line items inside of the list */
+  display: flex;
+}
+
+.navbar-links li {
+  /* remove the underlined and the dots*/
+  list-style: none;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: white;
+  padding: 1rem;
+  /* display block so they show up as a larger size  */
+  display: block;
+}
+
+.navbar-links li:hover {
+  background-color: #555;
+}
+
+/* making it responsive, hamburger menu, first - add inside the html (toggle button with three different spans (class='bar')) */
+
+.toggle-button {
+  /* so we can force it to be all the way on the right of the screen without messing with the flow of the rest our elements */
+  position: absolute;
+  /* push it FROM the top of the screen */
+  top: 0.75rem;
+  /* from the right side of the screen */
+  right: 1rem;
+  /* to make sure this does not display by default */
+  display: none;
+  /* for all the different spans line up on top of each other */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 31px;
+  height: 21px;
+}
+
+/* add a styling so they could show up */
+.toggle-button .bar {
+  height: 3px;
+  /* 100% of the width inside of the toggle-button container */
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+@media (max-width: 400px) {
+  .toggle-button {
+    /* so it shows up */
+    display: flex;
+  }
+
+  .navbar-links {
+    /* so it does not show up */
+    display: none;
+    width: 100%;
+  }
+
+  .navbar {
+    /* change the flex-direction to column, so everything will be positioned on top of each other */
+    flex-direction: column;
+    /* align items on the left */
+    align-items: flex-start;
+  }
+
+  /* to stack navbar links top to bottom */
+  .navbar-links ul {
+    /* ul had display - flex, we changing row (default) to column */
+    flex-direction: column;
+    /* we want them in the center instead of on the left, so width:100% - it will give the ul spanning 100%, AND we also need to make our actual container (navbar-links) also 100% */
+    width: 100%;
+  }
+  /* to align in the center */
+  .navbar-links li {
+    text-align: center;
+  }
+
+  .navbar-links li a {
+    /* elements closer to each other */
+    padding: 0.5rem 1rem;
+  }
+
+  /* this is used in javascript to toggle the button style, make sure its a dot */
+  .navbar-links.active {
+    display: flex;
+  }
+}

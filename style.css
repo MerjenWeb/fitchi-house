@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+
+/* text 206A5D, 184D47 */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* '*' itself doesnt include before and after pseudo element */
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #edf6e5;
+}
+
+body {
+  text-align: center;
+  margin: 50px 30px;
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+}
+
+/* Navigation Bar */
+.menu {
+  display: none;
+}
+
+.navbar-links {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.navbar-links a:any-link {
+  font-weight: 700;
+  color: #fff;
+  padding: 5px 30px;
+  text-decoration: none;
+}
+
+.navbar-links a {
+  background-color: #184d47;
+}
+
+/* FIRST SECTION */
+.fitchi-image {
+  width: 100%;
+  height: auto;
+}
+
+.first-section {
+  display: flex;
+  gap: 25px;
+}
+
+.top,
+.bottom {
+  position: absolute;
+  background-color: #edf6e5;
+}
+
+.top {
+  font-weight: 900;
+  letter-spacing: 1px;
+  font-size: 23px;
+  padding: 0 10px;
+  left: 50px;
+  top: 200px;
+}
+
+.bottom {
+  font-size: 18px;
+  padding: 0 20px;
+  left: 50px;
+  top: 250px;
+}
+
+.right-side {
+  width: 40%;
+  flex: 1 1 auto;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.right-side div {
+  background-color: #184d47;
+  padding: 0px 20px;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  flex: 1 1 0;
+}
+
+/* SECOND SECTION */
+.second-section {
+  display: flex;
+  margin: 50px 0;
+  gap: 30px;
+}
+
+.second-section div {
+  background-color: #fff;
+  width: 500px;
+  flex: 1 0 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.emoji {
+  font-size: 50px;
+}
+
+.emoji-text {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.emoji-description {
+  font-size: 15px;
+}
+
+/* Third Section */
+
+.third-section {
+  background-color: #fff;
+  display: flex;
+  gap: 100px;
+  padding: 60px;
+  align-items: center;
+  /* justify-content: space-between; */
+}
+
+.third-section img {
+  width: 40%;
+  height: auto;
+}
+
+.fitchi-description {
+  display: flex;
+  font-weight: 700;
+  font-size: 18px;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 2.5;
+}
+
+.fitchi-description h3 {
+  font-size: 2rem;
+}
+
+.third-section a:any-link {
+  color: white;
+  font-weight: 700;
+  background-color: #ffc600;
+  text-decoration: none;
+  padding: 3px 10px;
+}
+
+/* Forth Section */
+/* H2 */
+h2 {
+  margin-top: 30px;
+}
+
+.tagamlar {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.tagamlar::before {
+  content: '';
+  width: 35%;
+  height: 30px;
+  border-radius: 3px;
+  background-image: linear-gradient(0.25turn, #edf6e5, 50%, #184d47);
+}
+
+.tagamlar::after {
+  content: '';
+  width: 35%;
+  height: 30px;
+  background-image: linear-gradient(0.25turn, #184d47, 50%, #edf6e5);
+  display: block;
+  border-radius: 3px;
+}
+
+/* IMAGES */
+
+.forth-section {
+  display: flex;
+  flex-direction: column;
+}
+.random-tagamlar {
+  margin: 50px 0;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 30px;
+  justify-content: space-around;
+}
+.random-tagamlar .random {
+  /* flex: 1 1 0; */
+  width: 280px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+@media (min-width: 1000px) {
+  .menu-button {
+    display: none;
+  }
+
+  .second-section {
+    flex-flow: row wrap;
+  }
+}
