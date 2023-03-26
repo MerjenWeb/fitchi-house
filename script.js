@@ -39,5 +39,5 @@ const arr = generateRandomNumber(10, 19);
 //works, but gives an uncaught typeError (setting 'src')
 for (let i = 0; i <= arr.length; i++) {
   const random = document.getElementsByClassName('random-image')[i];
-  random.src = `/images/random-img/${arr[i]}.jpeg`;
+  random.src = `./images/random-img/${arr[i]}.jpeg`;
 }
