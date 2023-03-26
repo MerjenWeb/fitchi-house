@@ -1,12 +1,25 @@
-const menuButton = document.querySelector('.menu');
-const navButtons = document.querySelector('.navbar-links');
-const randomPhoto = document.querySelectorAll('.random');
+const menuBtn = document.querySelector('.menu-button');
+const openIcon = document.querySelector('.menu-icon-open');
+const closeIcon = document.querySelector('.menu-icon-close');
+const navBtns = document.querySelector('.navigation-links');
 
-//Navbar section - Opening menu button
-const openMenu = () => {
-  navButtons.classList.toggle('active');
-};
-menuButton.addEventListener('click', openMenu);
+const randomPhoto = document.querySelectorAll('.random-image');
+
+console.log(menuBtn, open, close);
+
+// Navbar section - Opening menu button
+// when i click the menu button navigtion list should open, and krestik should appear, bar menu should disappear
+menuBtn.addEventListener('click', function () {
+  if (closeIcon.classList.contains('non-active')) {
+    closeIcon.classList.remove('non-active');
+    openIcon.classList.add('non-active');
+    navBtns.style.display = 'flex';
+  } else if (openIcon.classList.contains('non-active')) {
+    openIcon.classList.remove('non-active');
+    closeIcon.classList.add('non-active');
+    navBtns.style.display = 'none';
+  }
+});
 
 //Section 5 - RANDOM and UNIQUE img chosen from images folder
 // Create an array of random and unique numbers
@@ -25,6 +38,6 @@ const arr = generateRandomNumber(10, 19);
 
 //works, but gives an uncaught typeError (setting 'src')
 for (let i = 0; i <= arr.length; i++) {
-  const random = document.getElementsByClassName('random')[i];
-  random.src = `/images/${arr[i]}.jpeg`;
+  const random = document.getElementsByClassName('random-image')[i];
+  random.src = `/images/random-img/${arr[i]}.jpeg`;
 }

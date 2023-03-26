@@ -11,93 +11,114 @@
 
   <body>
     <header>
-      <!-- NAVIGATION BAR - MENU AND LINKS -->
-      <div class="menu">
-        <a href="#" class="menu-button">
-          <span class="open">≡</span>
-          <span class="close">x</span>
-          <span>Menu</span>
-        </a>
+      <div class="navigation-container">
+        <button class="menu-button">
+          <ion-icon class="menu-icon-close non-active" name="close-outline"></ion-icon>
+          <ion-icon class="menu-icon-open" name="menu-outline"></ion-icon>
+          <span class="button-elements">MENU</span>
+        </button>
+
+        <nav class="navigation-links">
+          <ul class="navigation-list">
+            <li><a class="navigation-link" href="#biz-barada">BIZ</a></li>
+            <li><a class="navigation-link" href="#saylananlar">SAÝLANANLAR</a></li>
+            <li><a class="navigation-link" href="#fitchimiz">FITÇIMIZ</a></li>
+            <li><a class="navigation-link" href="#random">RANDOM</a></li>
+            <li><a class="navigation-link" target="_blank" href="https://turkmenkitchen.com/en/">YLHAM</a></li>
+          </ul>
+        </nav>
       </div>
-      <nav class="navbar-links">
-        <a target="_blank" href="#">BIZ BARADA</a>
-        <a target="_blank" href="#">SAÝLANANLAR</a>
-        <a target="_blank" href="#">FITÇIMIZ BARADA</a>
-        <a target="_blank" href="#">RANDOM TAGAMLAR</a>
-        <a target="_blank" href="https://turkmenkitchen.com/en/">YLHAM</a>
-      </nav>
     </header>
 
     <main>
-      <!-- SECTION -->
-      <div class="first-section">
+      <!-- SECTION 1 -->
+      <section id="biz-barada" class="first-section">
         <div class="left-side">
-          <p class="top">ŞÄHERIŇ IŇ TAGAMLY FITÇISI 🔥</p>
-          <p class="bottom">5 TMT-dan başlaýar</p>
-          <img class="fitchi-image" src="/images/7.jpeg" alt="The image of fitchi">
+          <div class="left-side-text">
+            <p>ŞÄHERIŇ IŇ TAGAMLY FITÇISI 🔥</p>
+            <p>5 TMT-dan başlaýar</p>
+          </div>
+          <div class="image">
+            <img class="fitchi-image" src="/images/random-img/7.jpeg" alt="The image of fitchi">
+          </div>
         </div>
         <div class="right-side">
-          <div class="price">
-            <p>AMATLY BAHADAN</p>
+          <div class="right-side-text">
+            <p>✔️ AMATLY BAHADAN</p>
           </div>
-          <div class="shipping">
-            <p>ELTIP BERME HYZMATY BAR</p>
+          <div class="right-side-text">
+            <p>✔️ ELTIP BERME HYZMATY</p>
           </div>
         </div>
-      </div>
+      </section>
 
-      <!-- SECTION -->
-      <div class="second-section">
+      <!-- SECTION 2 -->
+      <section id="saylananlar" class="second-section">
         <div class="features">
-          <p class="emoji">🥗 </p>
-          <p class="emoji-text">Işdäaçarlar</p>
-          <p class="emoji-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-        </div>
-        <div class="about">
-          <p class="emoji">🍜</p>
-          <p class="emoji-text">Corbalar</p>
-          <p class="emoji-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-        </div>
-        <div class="about">
-          <p class="emoji">🫖</p>
-          <p class="emoji-text">Çaý</p>
-          <p class="emoji-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-        </div>
-        <div class="about">
-          <p class="emoji">🍶</p>
-          <p class="emoji-text">Çal</p>
-          <p class="emoji-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-        </div>
-      </div>
+          <img class="features-image" src="/images/card-img/salad.jpg" alt="An image of a salad.">
+          <div class="features-image-attributes">
+            <p class="features-text">Işdäaçar</p>
+            <p class="features-description">Voluptas cumque minus expedita repellendus, dicta ut totam.</p>
 
-      <!-- SECTION -->
-      <div class="third-section">
-        <!-- çhange later -->
-        <img src="images/fit.png" alt="PNG Image of Fitchi">
+          </div>
+
+        </div>
+        <div class="features">
+          <img class="features-image" src="/images/card-img/soup.jpg" alt="An image of a soup.">
+          <div class="features-image-attributes">
+            <p class="features-text">Çorba</p>
+            <p class="features-description">Cupiditate voluptatum facere eaque incidunt soluta.</p>
+          </div>
+        </div>
+        <div class="features">
+          <img class="features-image" src="/images/card-img/tea.jpg" alt="An image of a tea.">
+          <div class="features-image-attributes">
+            <p class="features-text">Çaý</p>
+            <p class="features-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+        </div>
+
+        <div class="features">
+          <img class="features-image" src="/images/card-img/chal.jpg" alt="An image of a chal.">
+          <div class="features-image-attributes">
+            <p class="features-text">Çal</p>
+            <p class="features-description">Accusantium, deserunt laborum veniam illo quisquam.</p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- SECTION 3 -->
+      <section id="fitchimiz" class="third-section">
+        <div class="fitchi-image-div">
+          <img class="fitchi-png" src="images/png-img/fit.png" alt="PNG Image of Fitchi">
+        </div>
         <div class="fitchi-description">
           <h3>TÜRKMEN FITÇISI</h3>
-          <p>Haçandan bäri gozläp ýören fitçiňiziň</p>
-          <p>taýýarlanyş usuly </p>
-          <a href="https://turkmenkitchen.com/tm/2014/12/17/fitci/">Giňişleýin öwreniň &rarr;</a>
+          <p>Haçandan bäri gozläp ýören fitçiňiziň taýýarlanyş usuly barada</p>
+          <a class="fitchi-description-btn" target="_blank"
+            href="https://turkmenkitchen.com/tm/2014/12/17/fitci/">Giňişleýin öwreniň &rarr;</a>
         </div>
-      </div>
+      </section>
 
       <!-- SECTION 4 -->
-      <div class="forth-section">
-        <h2 class="tagamlar">RANDOM TAGAMLAR</h2>
-        <div class="random-tagamlar">
-          <img class="random" src="/images/1.jpeg" alt="Random-Photos">
-          <img class="random" src="/images/2.jpeg" alt="Random-Photos">
-          <img class="random" src="/images/3.jpeg" alt="Random-Photos">
-          <img class="random" src="/images/4.jpeg" alt="Random-Photos">
-          <img class="random" src="/images/5.jpeg" alt="Random-Photos">
-          <img class="random" src="/images/6.jpeg" alt="Random-Photos">
-          <img class="random" src="/images/7.jpeg" alt="Random-Photos">
-          <img class="random" src="/images/8.jpeg" alt="Random-Photos">
+      <section id="random" class="forth-section">
+        <h3 class="random-title">RANDOM TAGAMLAR</h3>
+        <div class="random-images">
+          <img class="random-image" src="/images/random-img/1.jpeg" alt="Random-Photos">
+          <img class="random-image" src="/images/random-img/2.jpeg" alt="Random-Photos">
+          <img class="random-image" src="/images/random-img/3.jpeg" alt="Random-Photos">
+          <img class="random-image" src="/images/random-img/4.jpeg" alt="Random-Photos">
+          <img class="random-image" src="/images/random-img/5.jpeg" alt="Random-Photos">
+          <img class="random-image" src="/images/random-img/6.jpeg" alt="Random-Photos">
+          <img class="random-image" src="/images/random-img/7.jpeg" alt="Random-Photos">
+          <img class="random-image" src="/images/random-img/8.jpeg" alt="Random-Photos">
         </div>
-      </div>
+      </section>
     </main>
     <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   </body>
 
 </html>
