@@ -41,5 +41,5 @@ for (let [i, el] of Object.entries(arr)) {
 	i = Number(i) + 1;
 	console.log(i, el);
 	const random = document.getElementsByClassName("random-image")[i];
-	random.src = `./images/random-img/${el}.jpeg`;
+	random.src = `images/random-img/${el}.jpeg`;
 }
