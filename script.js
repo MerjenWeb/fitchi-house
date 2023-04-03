@@ -1,24 +1,15 @@
+const nav = document.querySelector(".navigation-container");
 const menuBtn = document.querySelector(".menu-button");
+// const menuBtn
 const openIcon = document.querySelector(".menu-icon-open");
 const closeIcon = document.querySelector(".menu-icon-close");
 const navBtns = document.querySelector(".navigation-list");
-
 const randomPhoto = document.querySelectorAll(".random-image");
-
-console.log(menuBtn, open, close);
 
 // Navbar section - Opening menu button
 // when i click the menu button navigtion list should open, and krestik should appear, bar menu should disappear
 menuBtn.addEventListener("click", function () {
-	if (closeIcon.classList.contains("non-active")) {
-		closeIcon.classList.remove("non-active");
-		openIcon.classList.add("non-active");
-		navBtns.style.display = "grid";
-	} else if (openIcon.classList.contains("non-active")) {
-		openIcon.classList.remove("non-active");
-		closeIcon.classList.add("non-active");
-		navBtns.style.display = "none";
-	}
+	nav.classList.toggle("active");
 });
 
 //Section 5 - RANDOM and UNIQUE img chosen from images folder

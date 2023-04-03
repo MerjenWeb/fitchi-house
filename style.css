@@ -53,10 +53,6 @@ header {
 	cursor: pointer;
 }
 
-.non-active {
-	display: none;
-}
-
 /* NAVIGATION LINKS */
 .navigation-container {
 	display: flex;
@@ -67,22 +63,13 @@ header {
 .navigation-list {
 	list-style: none;
 	width: 100%;
-	/* 
-	display: flex;
-	justify-content: flex-start;
-	align-items: start;
-	flex-wrap: wrap;
-	 */
 	margin: 1rem 0;
 	display: grid;
 	gap: 1rem;
-
 	grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
 }
 
 .navigation-list li {
-	/* flex: 1 1 0; */
-	/* align-self: flex-start; */
 	text-align: center;
 }
 
@@ -309,10 +296,29 @@ header {
 		display: flex;
 	}
 
-	/* .navigation-list {
+	.navigation-list {
 		display: none;
-		flex-wrap: wrap;
-	} */
+	}
+
+	.active .navigation-list {
+		display: grid;
+	}
+
+	.menu-icon-close {
+		display: none;
+	}
+
+	.menu-icon-open {
+		display: block;
+	}
+
+	.active .menu-icon-close {
+		display: block;
+	}
+
+	.active .menu-icon-open {
+		display: none;
+	}
 
 	.first-section {
 		flex-direction: column;
